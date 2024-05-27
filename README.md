@@ -1,7 +1,7 @@
 # QuantaKey Project README
 
 ## Overview
-QuantaKey is a Python application designed to automate various desktop tasks using image recognition, window management, and keyboard interactions. It leverages libraries such as pyautogui, pytesseract, and pywinauto to interact with any desktop and application environment.
+QuantaKey is a sophisticated Python application designed to provide mouse free interaction by leveraging pywinauto, advanced image recognition, window management, and keyboard interaction techniques. This tool is ideal for users looking to improve productivity while navigating GUI tasks efficiently and with high precision.
 
 ## Features
 - **Automated GUI interactions**: Simulate mouse interactions using only keystrokes
