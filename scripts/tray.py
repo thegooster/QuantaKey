@@ -14,7 +14,7 @@ def resource_path(relative_path):
 icon_path = resource_path('tray.ico')
 def start_tray():
     menu_options = (("Restart", None, restart_app),)
-    systray = CustomSysTrayIcon(icon_path, "My App", menu_options, on_quit=quit_app)
+    systray = CustomSysTrayIcon(icon_path, "QuantaKey", menu_options, on_quit=quit_app)
     systray.start()
 
 class CustomSysTrayIcon(SysTrayIcon):
