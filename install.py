@@ -1,25 +1,32 @@
+import os
 import subprocess
 import sys
-import os
 
-def create_venv():
-    # Check if the virtual environment folder already exists
-    if not os.path.exists('venv'):
-        # Create the virtual environment
-        subprocess.check_call([sys.executable, '-m', 'venv', 'venv'])
-        print("Virtual environment created.")
+def create_and_activate_venv():
+    # Create a virtual environment named 'venv' in the current directory
+    subprocess.call([sys.executable, "-m", "venv", "venv"])
+    
+    # Activate the virtual environment
+    # For Windows
+    if os.name == 'nt':
+        activate_script = os.path.join('.', 'venv', 'Scripts', 'activate')
+    # For Unix or MacOS
     else:
-        print("Virtual environment already exists.")
+        activate_script = os.path.join('.', 'venv', 'bin', 'activate')
+    
+    # Execute the activate script
+    activate_command = f"source {activate_script}"
+    os.system(activate_command)
 
 def install_requirements():
-    # Activate the virtual environment
-    activate_script = 'venv\\Scripts\\activate_this.py' if os.name == 'nt' else 'venv/bin/activate_this.py'
-    exec(open(activate_script).read(), {'__file__': activate_script})
+    # Install packages from requirements.txt
+    subprocess.call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
 
-    # Install requirements
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-r', 'requirements.txt'])
-    print("Requirements installed.")
+def run_main():
+    # Run the main.py script
+    subprocess.call([sys.executable, "main.py"])
 
 if __name__ == "__main__":
-    create_venv()
+    create_and_activate_venv()
     install_requirements()
+    run_main()
