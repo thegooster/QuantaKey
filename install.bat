@@ -9,7 +9,7 @@ REM Install packages from requirements.txt
 python -m pip install -r requirements.txt
 
 REM Run the main.py script
-python \scripts\main.py
+python scripts\main.py
 
 REM Deactivate the virtual environment
 call venv\Scripts\deactivate
