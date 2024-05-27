@@ -8,7 +8,7 @@ QuantaKey is a Python application designed to automate various desktop tasks usi
 
 - **Window management**: Identify and manipulate application windows, elements, and more using pywinauto and direct Windows API calls.
 
-- **OCR capabilities**: Extract text from the screen using [pytesseract] as fallback when desired search not found via pywinauto
+- **OCR capabilities**: Extract text from the screen using pytesseract as fallback when desired search not found via pywinauto
 
 
 ## Installation
@@ -23,9 +23,13 @@ QuantaKey is a Python application designed to automate various desktop tasks usi
 
 ### Setup
 1. Clone the repository:
-   ```git clone https://github.com/your-repository/QuantaKey.git```
+   ```
+   git clone https://github.com/your-repository/QuantaKey.git
+   ```
 2. Install the required Python packages:
-   ```pip install -r requirements.txt```
+   ```
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 To use the application, follow these steps:
@@ -33,11 +37,18 @@ To use the application, follow these steps:
 2. Navigation: Once activated, navigate through the search suggestions using the Tab key or the arrow keys.
 3. Tray Menu: The tray menu provides options to restart or exit the application.
 To run the application, execute the command below in your terminal:
-```python main.py```
+   ```
+   python main.py
+   ```
+
 ## Compilation
 To compile the project into a standalone executable, install and use PyInstaller with the following commands:
-```pip install pyinstaller```
-```pyinstaller --onefile --windowed --exclude-module PySide6 --name QuantaKey --icon tray.ico --add-data "tray.ico;." main.py tray.py```
+   ```
+   pip install pyinstaller
+   ```
+   ```
+   pyinstaller --onefile --windowed --exclude-module PySide6 --name QuantaKey --icon tray.ico --add-data "tray.ico;." main.py tray.py
+   ```
 
 ## License
 QuantaKey is distributed under a custom license. For more details, see the [LICENSE](./LICENSE) file.
