@@ -24,7 +24,7 @@ QuantaKey is a sophisticated Python application designed to provide mouse free i
 ### Setup
 1. Clone the repository:
    ```
-   git clone https://github.com/your-repository/QuantaKey.git
+   git clone https://github.com/thegooster/QuantaKey.git
    ```
 2. Install the required Python packages:
    ```
