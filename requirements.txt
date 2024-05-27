@@ -1,0 +1,12 @@
+pyautogui
+pygetwindow
+pywinauto
+Pillow
+PyQt5
+keyboard
+numpy
+opencv-python
+pythoncom
+winrt
+psutil
+infi.systray
