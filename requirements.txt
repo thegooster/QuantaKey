@@ -1,4 +1,4 @@
-pyautogui
+PyAutoGUI
 pygetwindow
 pywinauto
 Pillow
@@ -10,3 +10,5 @@ pythoncom
 winrt
 psutil
 infi.systray
+pytesseract
+winrt-runtime
